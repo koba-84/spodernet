@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup,find_packages
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
@@ -17,7 +17,7 @@ setup(
     license = "MIT",
     keywords = "deep learning NLP",
     url = "http://packages.python.org/spodernet",
-    packages=['spodernet'],
+    packages=find_packages(include=["spodernet", "spodernet.*"]),
     test_suite="tests",
     long_description=read('README.md'),
     classifiers=[
